@@ -1,8 +1,6 @@
-package com.jeussa.api.v4.bukkit.protocol;
+package fireworks;
 
 import org.bukkit.inventory.ItemStack;
-
-import com.jeussa.api.v4.bukkit.API;
 
 public class jDataWatcherObject<T> implements iNmsObject{
 	
@@ -20,7 +18,7 @@ public class jDataWatcherObject<T> implements iNmsObject{
 	private final Object nms;
 	
 	private jDataWatcherObject(String fieldname, String classname){
-		this.nms=jDataWatcherObject.util_getField(fieldname, classname);
+		this.nms=ProtocolUtils.refl_fieldGet0(fieldname, classname);
 	}
 	
 	/**
@@ -29,17 +27,5 @@ public class jDataWatcherObject<T> implements iNmsObject{
 	@Override
 	public Object build(){
 		return this.nms;
-	}
-	
-	/**
-	 * Get
-	 */
-	private static Object util_getField(String fieldname, String classname){
-		try{
-			return API.reflectionUtil.field_get(fieldname, ProtocolUtils.getMinecraftClass(classname));
-		}catch(Exception e){
-			API.console.debug(e);
-			return null;
-		}
 	}
 }
