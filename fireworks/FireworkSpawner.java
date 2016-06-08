@@ -54,6 +54,9 @@ public class FireworkSpawner {
 			new PH_PO_EntityDestroy(entityId).send(players);
 		}
 	}
+	public static void spawn(Location location, FireworkEffect effect, List<Player> players){
+		FireworkSpawner.spawn(location, effect, players.toArray(new Player[players.size()]));
+	}
 	
 	/**
 	 * Utils
