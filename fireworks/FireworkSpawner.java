@@ -1,6 +1,7 @@
 package fireworks;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 import org.bukkit.FireworkEffect;
@@ -31,12 +32,12 @@ public class FireworkSpawner {
 			meta.addEffect(effect);
 			item.setItemMeta(meta);
 			
-			jDataWatcherItem<Byte> i1=new jDataWatcherItem<Byte>(jDataWatcherObject.entity_ay, (byte)0);
-			jDataWatcherItem<Integer> i2=new jDataWatcherItem<Integer>(jDataWatcherObject.entity_az, 300);
-			jDataWatcherItem<String> i3=new jDataWatcherItem<String>(jDataWatcherObject.entity_aA, "");
-			jDataWatcherItem<Boolean> i4=new jDataWatcherItem<Boolean>(jDataWatcherObject.entity_aB, false);
-			jDataWatcherItem<Boolean> i5=new jDataWatcherItem<Boolean>(jDataWatcherObject.entity_aC, false);
-			jDataWatcherItem<ItemStack> i6=new jDataWatcherItem<ItemStack>(jDataWatcherObject.entityfireworks_FIREWORK_ITEM, item);
+			jDataWatcherItem<Byte> i1=new jDataWatcherItem<Byte>(jDataWatcherObject.entity_byte, (byte)0);
+			jDataWatcherItem<Integer> i2=new jDataWatcherItem<Integer>(jDataWatcherObject.entity_int, 300);
+			jDataWatcherItem<String> i3=new jDataWatcherItem<String>(jDataWatcherObject.entity_string, "");
+			jDataWatcherItem<Boolean> i4=new jDataWatcherItem<Boolean>(jDataWatcherObject.entity_boolean1, false);
+			jDataWatcherItem<Boolean> i5=new jDataWatcherItem<Boolean>(jDataWatcherObject.entity_boolean2, false);
+			jDataWatcherItem<ItemStack> i6=new jDataWatcherItem<ItemStack>(jDataWatcherObject.entityfireworks_itemstack, item);
 			
 			i1.setFlag(false);
 			i2.setFlag(false);
